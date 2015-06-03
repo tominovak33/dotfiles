@@ -1,0 +1,28 @@
+# Linux
+.directory
+.Trash-*
+
+# Mac OX
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# PHP Storm
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+
+
+# Notepad++
+*.bak
+
+#Other
+node_modules/

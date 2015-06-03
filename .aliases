@@ -1,0 +1,91 @@
+# Easier navigation:
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+# Shortcuts
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/projects"
+alias code="cd ~/code"
+alias web="cd /var/www/"
+alias cl="clear"
+alias g="git"
+alias v="vim"
+alias c='clear'
+alias k='clear'
+alias cls='clear'
+alias edit="$EDITOR"
+alias q="exit"
+alias h="history"
+alias md='mkdir -p'
+
+
+# List
+alias sl=ls
+alias ls='ls -G'        # Compact view, show colors
+alias la='ls -AF'       # Compact view, show hidden
+alias ll='ls -al'
+alias l='ls -a'
+alias l1='ls -1'
+
+
+
+# Random Things
+alias please=sudo
+
+# List only directories
+alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# GIT
+# Undo git push
+alias undogitpush="git push -f origin HEAD^:master"
+
+
+# IP addresses
+#Eg ip tomi.com
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# DNS 
+alias digg="dig @8.8.8.8"
+alias digo="dig @208.67.222.222"
+
+alias mx="dig MX"
+
+# npm
+alias npmi="sudo npm install"
+alias npmg="sudo npm install -g"
+alias npmu="sudo npm update"
+alias npmr="sudo npm uninstall"
+alias npmrg="sudo npm uninstall -g"
+alias npmdev="sudo npm install --save-dev"
+alias npmsave="sudo npm install --save"
+alias noderi="rm -rf node_modules && npm cache clear && npm i"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
+
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults wrSite com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# Make Grunt print stack traces by default
+command -v grunt > /dev/null && alias grunt="grunt --stack"
+
+# npm offline
+# install npm dependencies from cache
+# https://github.com/npm/npm/issues/2568#issuecomment-30626394
+alias npmo="sudo npm install --cache-min 999999999"
+
+#Apache
+
+alias apachea="tail -f /var/log/apache2/access_log"
+alias apachee="tail -f /var/log/apache2/error_log"
