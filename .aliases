@@ -3,7 +3,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
+alias ~="cd ~"
 alias -- -="cd -"
 
 # Shortcuts
@@ -26,16 +26,13 @@ alias md='mkdir -p'
 
 # List
 alias sl=ls
-alias ls='ls -G'        # Compact view, show colors
-alias la='ls -AF'       # Compact view, show hidden
 alias ll='ls -al'
 alias l='ls -a'
 alias l1='ls -1'
 
-
-
 # Random Things
 alias please=sudo
+alias force=sudo
 
 # List only directories
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
@@ -49,12 +46,17 @@ alias undogitpush="git push -f origin HEAD^:master"
 
 
 # IP addresses
-#Eg ip tomi.com
+
+# Return public IP
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # DNS 
+# Google primary DNS server
 alias digg="dig @8.8.8.8"
+
+# Open DNS primary DNS server
 alias digo="dig @208.67.222.222"
 
 alias mx="dig MX"
@@ -67,18 +69,17 @@ alias npmr="sudo npm uninstall"
 alias npmrg="sudo npm uninstall -g"
 alias npmdev="sudo npm install --save-dev"
 alias npmsave="sudo npm install --save"
+# Delete and reinstall node modules
 alias noderi="rm -rf node_modules && npm cache clear && npm i"
 
+# MacOS things
 # Recursively delete `.DS_Store` files
+# Better solution: http://www.linuxmint.com/download.php
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
-
-# Hide/show all desktop icons (useful when presenting)
+# Hide or show all desktop icons
 alias hidedesktop="defaults wrSite com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
-# Make Grunt print stack traces by default
-command -v grunt > /dev/null && alias grunt="grunt --stack"
 
 # npm offline
 # install npm dependencies from cache
@@ -89,7 +90,6 @@ alias npmo="sudo npm install --cache-min 999999999"
 
 alias apachea="tail -f /var/log/apache2/access_log"
 alias apachee="tail -f /var/log/apache2/error_log"
-
 
 # Gulp (npm shortcut)
 
