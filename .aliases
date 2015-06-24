@@ -85,7 +85,12 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 # https://github.com/npm/npm/issues/2568#issuecomment-30626394
 alias npmo="sudo npm install --cache-min 999999999"
 
-#Apache
+# Apache
 
 alias apachea="tail -f /var/log/apache2/access_log"
 alias apachee="tail -f /var/log/apache2/error_log"
+
+
+# Gulp (npm shortcut)
+
+alias npmgulp="./node_modules/.bin/gulp"
