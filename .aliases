@@ -88,8 +88,8 @@ alias npmo="sudo npm install --cache-min 999999999"
 
 # Apache
 
-alias apachea="tail -f /var/log/apache2/access_log"
-alias apachee="tail -f /var/log/apache2/error_log"
+alias apachea="tail -f /var/log/apache2/access.log"
+alias apachee="tail -f /var/log/apache2/error.log"
 
 # Gulp (npm shortcut)
 
