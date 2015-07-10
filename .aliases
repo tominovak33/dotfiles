@@ -43,7 +43,13 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 # GIT
 # Undo git push
 alias undogitpush="git push -f origin HEAD^:master"
-
+alias gc="git clone"
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add ."
+alias gc="git commit"
+alias gco="git checkout"
+alias gp="git push"
 
 # IP addresses
 
